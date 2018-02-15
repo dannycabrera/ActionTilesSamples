@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{0D7A09DB-82ED-4F29-8C02-01FBB87B5DF2}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>iOSActionTiles</RootNamespace>
+    <AssemblyName>iOSActionTiles</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>61590</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>51538</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="ActionComponents">
+      <HintPath>..\..\..\ActionComponents\ActionComponentsTrial\iOS\ActionComponents.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\First.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Second.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\First.imageset\44-shoebox.png" />
+    <ImageAsset Include="Assets.xcassets\First.imageset\44-shoebox%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Second.imageset\53-house.png" />
+    <ImageAsset Include="Assets.xcassets\Second.imageset\53-house%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Agreement.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Agreement.imageset\agreement-2365811_1920.jpg" />
+    <ImageAsset Include="Assets.xcassets\Add.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Add.imageset\31-circle-plus.png" />
+    <ImageAsset Include="Assets.xcassets\Add.imageset\31-circle-plus%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Arrow.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Arrow.imageset\Arrow.jpg" />
+    <ImageAsset Include="Assets.xcassets\Brightness.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Brightness.imageset\61-brightness.png" />
+    <ImageAsset Include="Assets.xcassets\Brightness.imageset\61-brightness%402x.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarDay.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CalendarDay.imageset\30x-Calendar-Day.png" />
+    <ImageAsset Include="Assets.xcassets\Crop.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Crop.imageset\30x-Crop.png" />
+    <ImageAsset Include="Assets.xcassets\FilmRoll.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\FilmRoll.imageset\30x-Film-Roll.png" />
+    <ImageAsset Include="Assets.xcassets\Home.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Home.imageset\53-house.png" />
+    <ImageAsset Include="Assets.xcassets\Home.imageset\53-house%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Light.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Light.imageset\84-lightbulb.png" />
+    <ImageAsset Include="Assets.xcassets\Light.imageset\84-lightbulb%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Lock.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Lock.imageset\30x-Lock.png" />
+    <ImageAsset Include="Assets.xcassets\Marker.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Marker.imageset\30x-Marker.png" />
+    <ImageAsset Include="Assets.xcassets\OpenMail.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\OpenMail.imageset\30x-Open-Mail.png" />
+    <ImageAsset Include="Assets.xcassets\PasteBoard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\PasteBoard.imageset\30x-Paste.png" />
+    <ImageAsset Include="Assets.xcassets\Linen.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Linen.imageset\Linen.jpg" />
+    <ImageAsset Include="Assets.xcassets\Polaroid.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Polaroid.imageset\30x-Polaroid.png" />
+    <ImageAsset Include="Assets.xcassets\Boat.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Boat.imageset\Boat.jpg" />
+    <ImageAsset Include="Assets.xcassets\Bridge.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Bridge.imageset\Bridge.jpg" />
+    <ImageAsset Include="Assets.xcassets\Fountain.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Fountain.imageset\Fountain.jpg" />
+    <ImageAsset Include="Assets.xcassets\ManWithChild.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ManWithChild.imageset\ManWithChild.jpg" />
+    <ImageAsset Include="Assets.xcassets\AddToCloud.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AddToCloud.imageset\30x-Add-to-Cloud.png" />
+    <ImageAsset Include="Assets.xcassets\Airplane.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Airplane.imageset\30x-Airplane.png" />
+    <ImageAsset Include="Assets.xcassets\ATMCard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ATMCard.imageset\30x-ATM-Card.png" />
+    <ImageAsset Include="Assets.xcassets\Bookmark.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Bookmark.imageset\30x-Bookmark.png" />
+    <ImageAsset Include="Assets.xcassets\Briefcase.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Briefcase.imageset\30x-Brightness.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarDayOfWeek.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CalendarDayOfWeek.imageset\30x-Calendar-Day-of-Week.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarMonth.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CalendarMonth.imageset\30x-Calendar-Month.png" />
+    <ImageAsset Include="Assets.xcassets\CalendarWeek.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CalendarWeek.imageset\30x-Calendar-Week.png" />
+    <ImageAsset Include="Assets.xcassets\Chat.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Chat.imageset\30x-Chat.png" />
+    <ImageAsset Include="Assets.xcassets\Chats.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Chats.imageset\30x-Chats.png" />
+    <ImageAsset Include="Assets.xcassets\Checkmark.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Checkmark.imageset\30x-Checkmark.png" />
+    <ImageAsset Include="Assets.xcassets\Clipboard.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Clipboard.imageset\30x-Clipboard.png" />
+    <ImageAsset Include="Assets.xcassets\Clock.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Clock.imageset\30x-Clock.png" />
+    <ImageAsset Include="Assets.xcassets\ClosedMail.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ClosedMail.imageset\30x-Checkmark.png" />
+    <ImageAsset Include="Assets.xcassets\Cloud.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Cloud.imageset\30x-Cloud.png" />
+    <ImageAsset Include="Assets.xcassets\Contrast.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contrast.imageset\30x-Contrast.png" />
+    <ImageAsset Include="Assets.xcassets\Cut.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Cut.imageset\30x-Cut.png" />
+    <ImageAsset Include="Assets.xcassets\Folder.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Folder.imageset\30x-Folder.png" />
+    <ImageAsset Include="Assets.xcassets\Gear.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Gear.imageset\30x-Gear.png" />
+    <ImageAsset Include="Assets.xcassets\GoLight.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\GoLight.imageset\30x-Go-Light.png" />
+    <ImageAsset Include="Assets.xcassets\GroceryBag.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\GroceryBag.imageset\30x-Grocery-Bag.png" />
+    <ImageAsset Include="Assets.xcassets\Key.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Key.imageset\30x-Key.png" />
+    <ImageAsset Include="Assets.xcassets\License.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\License.imageset\30x-License.png" />
+    <ImageAsset Include="Assets.xcassets\Link.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Link.imageset\30x-Link.png" />
+    <ImageAsset Include="Assets.xcassets\Microphone.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Microphone.imageset\30x-Microphone.png" />
+    <ImageAsset Include="Assets.xcassets\Monitor.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Monitor.imageset\30x-Monitor.png" />
+    <ImageAsset Include="Assets.xcassets\Movie.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Movie.imageset\30x-Movie.png" />
+    <ImageAsset Include="Assets.xcassets\Music.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Music.imageset\30x-Music.png" />
+    <ImageAsset Include="Assets.xcassets\Picture.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Picture.imageset\30x-Picture.png" />
+    <ImageAsset Include="Assets.xcassets\Portfolio.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Portfolio.imageset\30x-Portfolio.png" />
+    <ImageAsset Include="Assets.xcassets\RadioTower.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\RadioTower.imageset\30x-Radio-Tower.png" />
+    <ImageAsset Include="Assets.xcassets\Radio.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Radio.imageset\30x-Radio.png" />
+    <ImageAsset Include="Assets.xcassets\RemoveFromCloud.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\RemoveFromCloud.imageset\30x-Remove-from-Cloud.png" />
+    <ImageAsset Include="Assets.xcassets\Scanner.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Scanner.imageset\30x-Scanner.png" />
+    <ImageAsset Include="Assets.xcassets\ShoppingBag.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ShoppingBag.imageset\30x-Shopping-Bag.png" />
+    <ImageAsset Include="Assets.xcassets\StopLight.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\StopLight.imageset\30x-Stop-Light.png" />
+    <ImageAsset Include="Assets.xcassets\Tag.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Tag.imageset\30x-Tag.png" />
+    <ImageAsset Include="Assets.xcassets\Tools.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Tools.imageset\30x-Tools.png" />
+    <ImageAsset Include="Assets.xcassets\TV.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TV.imageset\30x-TV.png" />
+    <ImageAsset Include="Assets.xcassets\Unlocked.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Unlocked.imageset\30x-Unlocked.png" />
+    <ImageAsset Include="Assets.xcassets\Wallet.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Wallet.imageset\30x-Wallet.png" />
+    <ImageAsset Include="Assets.xcassets\Widescreen.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Widescreen.imageset\30x-Widescreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\Agreement.imageset\" />
+    <Folder Include="Assets.xcassets\Add.imageset\" />
+    <Folder Include="Assets.xcassets\Arrow.imageset\" />
+    <Folder Include="Assets.xcassets\Brightness.imageset\" />
+    <Folder Include="Assets.xcassets\CalendarDay.imageset\" />
+    <Folder Include="Assets.xcassets\Crop.imageset\" />
+    <Folder Include="Assets.xcassets\FilmRoll.imageset\" />
+    <Folder Include="Assets.xcassets\Home.imageset\" />
+    <Folder Include="Assets.xcassets\Light.imageset\" />
+    <Folder Include="Assets.xcassets\Lock.imageset\" />
+    <Folder Include="Assets.xcassets\Marker.imageset\" />
+    <Folder Include="Assets.xcassets\OpenMail.imageset\" />
+    <Folder Include="Assets.xcassets\PasteBoard.imageset\" />
+    <Folder Include="Assets.xcassets\Linen.imageset\" />
+    <Folder Include="Assets.xcassets\Polaroid.imageset\" />
+    <Folder Include="Assets.xcassets\Boat.imageset\" />
+    <Folder Include="Assets.xcassets\Bridge.imageset\" />
+    <Folder Include="Assets.xcassets\Fountain.imageset\" />
+    <Folder Include="Assets.xcassets\ManWithChild.imageset\" />
+    <Folder Include="Assets.xcassets\AddToCloud.imageset\" />
+    <Folder Include="Assets.xcassets\Airplane.imageset\" />
+    <Folder Include="Assets.xcassets\ATMCard.imageset\" />
+    <Folder Include="Assets.xcassets\Bookmark.imageset\" />
+    <Folder Include="Assets.xcassets\Briefcase.imageset\" />
+    <Folder Include="Assets.xcassets\CalendarDayOfWeek.imageset\" />
+    <Folder Include="Assets.xcassets\CalendarMonth.imageset\" />
+    <Folder Include="Assets.xcassets\CalendarWeek.imageset\" />
+    <Folder Include="Assets.xcassets\Chat.imageset\" />
+    <Folder Include="Assets.xcassets\Chats.imageset\" />
+    <Folder Include="Assets.xcassets\Checkmark.imageset\" />
+    <Folder Include="Assets.xcassets\Clipboard.imageset\" />
+    <Folder Include="Assets.xcassets\Clock.imageset\" />
+    <Folder Include="Assets.xcassets\ClosedMail.imageset\" />
+    <Folder Include="Assets.xcassets\Cloud.imageset\" />
+    <Folder Include="Assets.xcassets\Contrast.imageset\" />
+    <Folder Include="Assets.xcassets\Cut.imageset\" />
+    <Folder Include="Assets.xcassets\Folder.imageset\" />
+    <Folder Include="Assets.xcassets\Gear.imageset\" />
+    <Folder Include="Assets.xcassets\GoLight.imageset\" />
+    <Folder Include="Assets.xcassets\GroceryBag.imageset\" />
+    <Folder Include="Assets.xcassets\Key.imageset\" />
+    <Folder Include="Assets.xcassets\License.imageset\" />
+    <Folder Include="Assets.xcassets\Link.imageset\" />
+    <Folder Include="Assets.xcassets\Microphone.imageset\" />
+    <Folder Include="Assets.xcassets\Monitor.imageset\" />
+    <Folder Include="Assets.xcassets\Movie.imageset\" />
+    <Folder Include="Assets.xcassets\Music.imageset\" />
+    <Folder Include="Assets.xcassets\Picture.imageset\" />
+    <Folder Include="Assets.xcassets\Portfolio.imageset\" />
+    <Folder Include="Assets.xcassets\RadioTower.imageset\" />
+    <Folder Include="Assets.xcassets\Radio.imageset\" />
+    <Folder Include="Assets.xcassets\RemoveFromCloud.imageset\" />
+    <Folder Include="Assets.xcassets\Scanner.imageset\" />
+    <Folder Include="Assets.xcassets\ShoppingBag.imageset\" />
+    <Folder Include="Assets.xcassets\StopLight.imageset\" />
+    <Folder Include="Assets.xcassets\Tag.imageset\" />
+    <Folder Include="Assets.xcassets\Tools.imageset\" />
+    <Folder Include="Assets.xcassets\TV.imageset\" />
+    <Folder Include="Assets.xcassets\Unlocked.imageset\" />
+    <Folder Include="Assets.xcassets\Wallet.imageset\" />
+    <Folder Include="Assets.xcassets\Widescreen.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="FirstViewController.cs" />
+    <Compile Include="SecondViewController.cs" />
+    <Compile Include="FirstViewController.designer.cs">
+      <DependentUpon>FirstViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecondViewController.designer.cs">
+      <DependentUpon>SecondViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
